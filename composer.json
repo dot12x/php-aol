@@ -1,0 +1,58 @@
+{
+    "name": "php-aol/php-aol",
+    "description": "PHP 8.4+ attribute-driven async/concurrency library (Fibers + Revolt)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sattorbek"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "revolt/event-loop": "^1.0",
+        "amphp/http-client": "^5.3",
+        "amphp/websocket-client": "^2.0",
+        "amphp/file": "^4.0",
+        "amphp/process": "^2.0",
+        "amphp/socket": "^2.4",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aol\\": "src/",
+            "Aol\\PhpStan\\": "ext/phpstan/src/"
+        },
+        "files": [
+            "src/Test/runScope.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aol\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.1",
+        "phpstan/phpstan": "^2.2"
+    },
+    "extra": {
+        "phpstan": {
+            "includes": ["ext/phpstan/extension.neon"]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse --memory-limit=512M",
+        "check": [
+            "@test",
+            "@phpstan"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run the PHPUnit test suite.",
+        "phpstan": "Run PHPStan level 9 across src/, tests/, and ext/phpstan/src/.",
+        "check": "Run tests followed by PHPStan."
+    }
+}

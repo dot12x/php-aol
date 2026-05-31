@@ -1,0 +1,39 @@
+# Composer
+/vendor/
+/composer.lock
+
+# Tooling caches
+/.phpstan.cache/
+/.phpunit.cache/
+/.phpunit.result.cache
+
+# Coverage / build artefacts
+/coverage/
+/build/
+/.coverage/
+
+# IDE / editor
+/.idea/
+/.vscode/
+/.fleet/
+/nbproject/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Ad-hoc scratch
+/tmp/
+/scratch/
+
+# Internal tooling — kept local, never shipped
+/.claude/
+/docs/superpowers/

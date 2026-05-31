@@ -1,0 +1,22 @@
+# Normalize line endings on commit; LF in the repo, native on checkout
+* text=auto eol=lf
+
+# Paths NOT included when consumers install via `composer require php-aol/php-aol`.
+# (Composer uses `git archive` semantics — `export-ignore` excludes the path.)
+/.claude            export-ignore
+/.github            export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/tests              export-ignore
+/phpstan.neon       export-ignore
+/phpunit.xml        export-ignore
+/phpunit.xml.dist   export-ignore
+/.phpstan.cache     export-ignore
+/.phpunit.cache     export-ignore
+/.phpunit.result.cache export-ignore
+
+# Kept in the published package (consumers benefit from these):
+#   /src         — library code
+#   /ext         — PHPStan extension
+#   /examples    — runnable demos (small, useful for learning)
+#   composer.json, README.md, LICENSE, CHANGELOG.md

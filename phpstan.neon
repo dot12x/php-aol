@@ -1,0 +1,13 @@
+includes:
+    - ext/phpstan/extension.neon
+
+parameters:
+    level: 9
+    paths:
+        - src
+        - tests
+        - ext/phpstan/src
+    tmpDir: .phpstan.cache
+    reportUnmatchedIgnoredErrors: false
+    universalObjectCratesClasses:
+        - Aol\Pending

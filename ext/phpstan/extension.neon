@@ -1,0 +1,17 @@
+services:
+    -
+        class: Aol\PhpStan\WrapperMethodsExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+    -
+        class: Aol\PhpStan\PendingMethodsExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
+    -
+        class: Aol\PhpStan\PendingPropertiesExtension
+        tags:
+            - phpstan.broker.propertiesClassReflectionExtension
+    -
+        class: Aol\PhpStan\ProxyInstanceMethodsExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
